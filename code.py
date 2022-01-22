@@ -1,21 +1,25 @@
-def are_valid_groups(stu_no, groups):
-    ans1 = True
-    ans2 = True
-    ans = False
-    for i in stu_no:
-        for j in groups:
-            if j.count(i) > 1:
-                ans1 = False
+def are_valid_groups(list_student_numbers,list_groups):
+    result1 = True
+    result2 = True
+    for x in list_student_numbers:
+        for y in list_groups:
+            if y.count(x) > 1:
+                result1 = False
                 break
-                
-    for j in groups:
-        if not (len(j) == 2 or len(j) == 3):
-            ans2 = False
+         
+    for y in list_groups:
+        if not (len(y) == 2 or len(y) == 3):
+            result2 = False
             break
             
-    if ans1 == False and ans2 == True:
-        ans = True
-        
-    return ans
-
+    if result1 == True and result2 == True:
+        return True
+    else:
+        return False
+ 
+    
+#print(are_valid_groups(["a","b","c","d","e","f","g"], [["a","b","c"], ["d","e"], ["d","b"], ["b"]]))
+#print(are_valid_groups(["a","b","c","d","e","f","g"],[["a"]]))
+#print(are_valid_groups(["a","b","c","d","e","f","g"],[["a","b"],["c","d"]]))
+#print(are_valid_groups(["a","b","c","d","e","f","g"], [["a","b","c"], ["f","g"], ["d","e"]]))
 
