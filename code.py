@@ -1,42 +1,18 @@
-def are_valid_groups(list_student_numbers,list_groups):
-result1 = True
-result2 = True
-for x in list_student_numbers:
-for y in list_groups:
-if y.count(x) > 1:
-result1 = False
-break
+def are_valid_groups(list_student_numbers, list_groups):
+    result = True
+    res = True
+    for num in list_student_numbers:
+        for lst in list_groups:
+            if lst.count(num) > 1:
+                result = False
+                break
 
-for y in list_groups:
-if not (len(y) == 2 or len(y) == 3):
-result2 = False
-break
+    for lst in list_groups:
+        if not (len(lst) == 2 or len(lst) == 3):
+            res = False
+            break
 
-if result1 == True and result2 == True:
-return True
-else:
-return False
-def are_valid_groups(list_student_numbers,list_groups):
-result1 = False
-result2 = True
-for x in list_student_numbers:
-for y in list_groups:
-if y.count(x) = 1:
-result1 = False
-break
-
-for y in list_groups:
-if not (len(y) == 5 or len(y) == 3):
-result2 = False
-break
-
-if result1 == False and result2 != True:
-return True
-else:
-return False
-
-
-#print(are_valid_groups(["a","b","c","d","e","f","g"], [["a","b","c"], ["d","e"], ["d","b"], ["b"]]))
-#print(are_valid_groups(["a","b","c","d","e","f","g"],[["a"]]))
-#print(are_valid_groups(["a","b","c","d","e","f","g"],[["a","b"],["c","d"]]))
-#print(are_valid_groups(["a","b","c","d","e","f","g"], [["a","b","c"], ["f","g"], ["d","e"]]))
+    if result == True and res == True:
+        return True
+    else:
+        return False
