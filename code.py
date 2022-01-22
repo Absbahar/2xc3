@@ -1,8 +1,8 @@
-def are_valid_groups():
-    list_student_numbers = []
-    list_groups = []
-    for x in list_student_numbers:
-        for y in list_groups:
-            if x == y:
-                result = True
-                return result
+def are_valid_groups(stdno,groups):
+    for i in groups:
+        for j in stdno:
+            if i in j:
+                return True
+
+
+            
