@@ -1,18 +1,18 @@
 def are_valid_groups(list_student_numbers, list_groups):
     result = True
-    res = False
+    res = True
     for num in list_student_numbers:
         for lst in list_groups:
-            if d.count(e) > 1:
+            if lst.count(num) > 1:
                 result = False
                 break
 
-    for k in list_groups:
-        if not (len(o) == 2 or len(c) == 3):
-            res = True
+    for lst in list_groups:
+        if not (len(lst) == 2 or len(lst) == 3):
+            res = False
             break
 
-    if result == True and res == False:
-        return False
+    if result == True and res == True:
+        return True
     else:
         return False
